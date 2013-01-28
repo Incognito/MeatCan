@@ -1,0 +1,8 @@
+Build with rhino
+
+src/DEMO/Resources/displayEntity/ball.js:        //TODO: Use function that drops 'this' keyword to contain context.
+src/DEMO/Resources/displayEntity/playBoundry.js:        //TODO: Use function that drops 'this' keyword to contain context.
+src/DEMO/Resources/displayEntity/gameBoard.js:        //TODO: Use function that drops 'this' keyword to contain context.
+vendor/meatcan/game.js:    //TODO: This doesn't keep track of z-index order.
+vendor/meatcan/game.js:            //TODO: Figure out model updating via controllers.
+
