@@ -27,10 +27,15 @@ var Game = (function(FPS, Hz) {
     var game = function() {
         var self=this;
         var n =0;
+        var increment = 1;
         setInterval(function() {
             //TODO: Figure out model updating via controllers.
             update();
-            n +=1;
+            if (n > 400 || n < 0) {
+                n *= -1;
+            }
+            n += increment;
+            console.log(n)
             if (step > Math.floor(FPS/Hz)) {
                 draw(n);
                 step = 0;
