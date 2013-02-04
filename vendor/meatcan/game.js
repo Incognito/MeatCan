@@ -32,11 +32,11 @@ var Game = (function(FPS, Hz) {
             //TODO: Figure out model updating via controllers.
             update();
             if (n > 400 || n < 0) {
-                n *= -1;
+                increment *= -1;
             }
             n += increment;
-            console.log(n)
-            if (step > Math.floor(FPS/Hz)) {
+            console.log(n);
+            if (step > Math.floor(Hz/FPS)) {
                 draw(n);
                 step = 0;
             } else {

@@ -1,6 +1,6 @@
-var displayItemMap = (function() {
+var DisplayItemMap = (function() {
 
-    var displayItemMap = (function(canvasContext) {
+    var displayItemMap = function(canvasContext) {
         var self=this;
         self.canvasContext = canvasContext;
         self._items = { };
@@ -12,9 +12,9 @@ var displayItemMap = (function() {
               }
           }
          */
-    });
+    };
 
-    displayItemMap.prototype.add = (function(name, contextFunction, zIndex) {
+    displayItemMap.prototype.add = function(name, contextFunction, zIndex) {
         var self=this;
         zIndex = zIndex || 0;
         if ("undefined" === typeof self._items[name]) {
@@ -23,21 +23,21 @@ var displayItemMap = (function() {
                 zIndex: zIndex
             };
         }
-    });
+    };
 
-    displayItemMap.prototype.remove = (function(name) {
+    displayItemMap.prototype.remove = function(name) {
         var self=this;
 
         delete self._items[name];
-    });
+    };
 
-    displayItemMap.prototype.render = (function(name, position, style) {
+    displayItemMap.prototype.render = function(name, position, style) {
         var self=this;
         var context = self.canvasContext;
         var displayItem = self._items[name];
 
         displayItem.contextInjector(context, position, style);
-    });
+    };
 
     return displayItemMap;
 }());

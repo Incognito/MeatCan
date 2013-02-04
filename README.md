@@ -4,14 +4,13 @@ Meta canvas layer to assist in MVC style canvas apps.
 
 
 Should be able to handle:
+        - Kernel 
         - Clock manager (Distrubutes out to game clock, frame clock, etc...)
         - Game state (can impact game clock for other states! eg, Pause game.)
           - Should abstract ways to deal with game state (global, network, brokers, pub/sub, database, shared entities)
-          - Leaning towards brokers or pubsub
+          - Leaning towards pubsub events
         - Kernel
         - Automatic module dependancy ... somehow.
-        - 
-        - 
         - Optimize for GCC?
         - Do I want static site, or a build with scripts/Rhino?
 
