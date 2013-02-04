@@ -16,6 +16,9 @@ var Game = (function(FPS, Hz) {
         for (item in displayItems._items) {
             if (displayItems._items.hasOwnProperty(item)) {
                 displayItems.render(item, position, style);
+                displayItems.render(item, {x:n+100, y:n}, style);
+                displayItems.render(item, {x:n+100, y:n+100}, style);
+                displayItems.render(item, {x:100, y:n}, style);
             }
         }
     }
