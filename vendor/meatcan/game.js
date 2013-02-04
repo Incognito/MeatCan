@@ -35,7 +35,6 @@ var Game = (function(FPS, Hz) {
                 increment *= -1;
             }
             n += increment;
-            console.log(n);
             if (step > Math.floor(Hz/FPS)) {
                 draw(n);
                 step = 0;
