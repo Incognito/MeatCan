@@ -26,10 +26,10 @@ var Game = (function(FPS, Hz) {
 
         function velocityShift(gravitySink, particle) {
             var gravity = 9.2/300; //A game second is 300 hz, gravity is 9.2 m/s square.
-            var vector = particle.vector
-            vector.x+=0
+            var vector = particle.vector;
+            vector.x+=0;
             vector.y+=9.2/50;
-            return vector
+            return vector;
         }
 
         if (items.length < 30000) {
